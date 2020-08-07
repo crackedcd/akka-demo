@@ -7,9 +7,10 @@ import akka.actor.Props;
 public class HelloWorldApp {
 
     public static void main(String[] args) {
+        sayHelloWorld();
     }
 
-    private void sayHelloWorld() {
+    private static void sayHelloWorld() {
         // 创建system，抽象actor系统，可包括多个actor
         ActorSystem hwSystem = ActorSystem.create("helloworld");
         // 创建actorRef，actor不直接与外界接触，操作依赖actorRef
