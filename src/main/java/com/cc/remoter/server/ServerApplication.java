@@ -1,11 +1,9 @@
-package com.cc.remoter;
+package com.cc.remoter.server;
 
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
-
-import java.util.Map;
 
 public class ServerApplication {
 

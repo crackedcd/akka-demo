@@ -1,4 +1,4 @@
-package com.cc.remoter;
+package com.cc.remoter.server;
 
 import akka.actor.AbstractActor;
 import akka.event.Logging;

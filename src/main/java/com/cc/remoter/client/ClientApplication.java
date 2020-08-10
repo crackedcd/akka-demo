@@ -1,10 +1,8 @@
-package com.cc.remoter;
+package com.cc.remoter.client;
 
 import akka.actor.*;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
-
-import java.util.Map;
 
 public class ClientApplication {
 
@@ -13,7 +11,7 @@ public class ClientApplication {
                 .load("remote/application-remote.conf")
                 .getConfig("ClientConf");
 
-        ActorSystem as = ActorSystem.create("AkkaServer", akkaConfig);
+        ActorSystem as = ActorSystem.create("AkkaClient", akkaConfig);
         String remoteActor = akkaConfig.getString("akka.actor.deployment.remoteServerActor.remote");
         ActorSelection selection = as.actorSelection(remoteActor);
         selection.tell("I am cc", null);
